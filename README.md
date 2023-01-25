@@ -1,8 +1,7 @@
 # wordle
 
+```
 WORDLE
-
-
 
 1 g u e s s
 2 _ _ _ _ _
@@ -36,3 +35,4 @@ check answer:
 		- count letters in guess vs answer
 		- for every letter in answer that's also in guess
 			- make any letter (in guess) yellow
+```
