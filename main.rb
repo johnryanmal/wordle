@@ -1,9 +1,15 @@
 words = File.read("words.txt").split(',')
-p words
+#p words
 
-word = 'tests'
+word = words.sample
+puts word
+
+#print "Enter in a word: "
+#input = gets.chomp
+input = 'guess'
 
 
-puts "Enter in a word:"
-input = gets.chomp
 
+word.each_char.with_index do |char, index|
+	p [char, index]
+end
