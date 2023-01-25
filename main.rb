@@ -9,12 +9,17 @@ input = gets.chomp
 
 
 def check(answer, guess)
-	colors = {}
+	color = {}
+
+	# init
+	5.times do |index|
+		color[index] = 0
+	end
 
 	# green
 	5.times do |index|
 		if answer[index] == guess[index]
-			colors[index] = :green
+			color[index] = :green
 		end
 	end
 
@@ -27,8 +32,6 @@ def check(answer, guess)
 			char = word[index]
 			if counts[char]
 				counts[char] += 1
-			else
-				counts[char] = 1
 			end
 		end
 		return counts
@@ -42,11 +45,11 @@ def check(answer, guess)
 		yellow_counts[char] = [count, guess_counts[char]].min
 	end
 
-	yellow_counts.each do |char, count|
-		p [char, count]
+	guess.each_char.with_index do |char, index|
+		p [char, index]
 	end
 
-	return colors
+	return color
 end
 
 # def print_green(green)
