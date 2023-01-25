@@ -4,6 +4,12 @@ words = File.read("words.txt").split(',')
 word = words.sample
 puts word
 
-# puts "Enter in a word:"
-# input = gets.chomp
+#print "Enter in a word: "
+#input = gets.chomp
+input = 'guess'
 
+
+
+word.each_char.with_index do |char, index|
+	p [char, index]
+end
