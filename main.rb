@@ -1,3 +1,6 @@
+words = File.read("words.txt").split(',')
+p words
+
 word = 'tests'
 
 
