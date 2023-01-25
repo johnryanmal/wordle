@@ -1,9 +1,9 @@
 words = File.read("words.txt").split(',')
-p words
+#p words
 
-word = 'tests'
+word = words.sample
+puts word
 
-
-puts "Enter in a word:"
-input = gets.chomp
+# puts "Enter in a word:"
+# input = gets.chomp
 
